@@ -11,8 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('car_categories', function (Blueprint $table) {
+        Schema::create('car_styles', function (Blueprint $table) {
             $table->id();
+            $table->tinyText('style_name');
             $table->timestamps();
         });
     }
@@ -22,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('car_categories');
+        Schema::dropIfExists('car_styles');
     }
 };
